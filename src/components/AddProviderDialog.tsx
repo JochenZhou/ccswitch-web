@@ -6,8 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import type { Provider, AppId } from '@/types';
 import { ArrowLeft, Lightbulb } from 'lucide-react';
-import { cn } from '@/lib/utils'; // Assuming cn exists, else create or remove
-import { Checkbox } from '@/components/ui/checkbox'; // Assuming Checkbox exists or use input type=checkbox
+
 
 interface AddProviderDialogProps {
   open: boolean;

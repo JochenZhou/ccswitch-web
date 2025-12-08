@@ -58,9 +58,9 @@ export function AddMcpDialog({ open, onOpenChange, appId }: AddMcpDialogProps) {
 
     try {
       await addMutation.mutateAsync({
-        id,
         name: name.trim() || id,
         server,
+        enabled: true,
         apps: {
           claude: appId === 'claude',
           codex: appId === 'codex',

@@ -60,9 +60,9 @@ export function EditProviderDialog({ open, onOpenChange, provider, appId, onSubm
       // Extract API key and base URL from config
       if (appId === 'gemini') {
         const envLines = config.rawEnv?.split('\n') || [];
-        const apiKeyLine = envLines.find(line => line.includes('GEMINI_API_KEY='));
-        const baseUrlLine = envLines.find(line => line.includes('GOOGLE_GEMINI_BASE_URL='));
-        const modelLine = envLines.find(line => line.includes('GEMINI_MODEL='));
+        const apiKeyLine = envLines.find((line: string) => line.includes('GEMINI_API_KEY='));
+        const baseUrlLine = envLines.find((line: string) => line.includes('GOOGLE_GEMINI_BASE_URL='));
+        const modelLine = envLines.find((line: string) => line.includes('GEMINI_MODEL='));
 
         if (apiKeyLine) setApiKey(apiKeyLine.split('=')[1] || '');
         if (baseUrlLine) setBaseUrl(baseUrlLine.split('=')[1] || '');

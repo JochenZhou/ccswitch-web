@@ -28,7 +28,7 @@ export function ProviderList({ appId, onAddProvider }: { appId: AppId; onAddProv
 
   const providers = data?.providers || {};
   const currentProviderId = data?.currentProviderId || '';
-  const providerList = Object.values(providers);
+  const providerList = Object.values(providers) as Provider[];
 
   const handleSwitch = async (provider: Provider) => {
     try {
@@ -70,7 +70,7 @@ export function ProviderList({ appId, onAddProvider }: { appId: AppId; onAddProv
 
   const handleEdit = async (provider: Provider) => {
     try {
-      await updateMutation.mutateAsync(provider);
+      await updateMutation.mutateAsync({ id: provider.id, provider });
       toast.success(t('toast.providerUpdated'));
     } catch (error) {
       toast.error(t('toast.error'));

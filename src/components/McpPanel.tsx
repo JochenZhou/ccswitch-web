@@ -2,12 +2,13 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Trash2, Plus, ArrowLeft } from 'lucide-react';
+
+import { Trash2, Plus, ArrowLeft, Edit } from 'lucide-react';
 import type { McpServer } from '@/types';
 import { useMcpServersQuery, useDeleteMcpServerMutation, useUpdateMcpServerMutation } from '@/lib/queries';
 import { toast } from 'sonner';
 import { AddMcpDialog } from './AddMcpDialog';
+import { EditMcpDialog } from './EditMcpDialog';
 
 export function McpPanel({ onBack }: { onBack?: () => void }) {
   const { t } = useTranslation();
@@ -15,8 +16,9 @@ export function McpPanel({ onBack }: { onBack?: () => void }) {
   const deleteMutation = useDeleteMcpServerMutation();
   const updateMutation = useUpdateMcpServerMutation();
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
+  const [editingServer, setEditingServer] = useState<McpServer | null>(null);
 
-  const serverList = Object.values(servers);
+  const serverList = Object.values(servers) as McpServer[];
 
   const handleDelete = async (server: McpServer) => {
     if (!confirm(t('confirm.deleteMcpServerMessage', { name: server.name }))) {
@@ -28,6 +30,10 @@ export function McpPanel({ onBack }: { onBack?: () => void }) {
     } catch (error) {
       toast.error(t('toast.error'));
     }
+  };
+
+  const handleEdit = (server: McpServer) => {
+    setEditingServer(server);
   };
 
   const handleToggleApp = async (server: McpServer, app: 'claude' | 'codex' | 'gemini') => {
@@ -81,14 +87,30 @@ export function McpPanel({ onBack }: { onBack?: () => void }) {
             <Card key={server.id}>
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
-                  <span>{server.name}</span>
-                  <Button
-                    size="sm"
-                    variant="destructive"
-                    onClick={() => handleDelete(server)}
-                  >
-                    <Trash2 className="h-4 w-4" />
-                  </Button>
+                  <div className="flex items-center gap-2">
+                    <span>{server.name}</span>
+                    <span className="text-xs px-2 py-1 rounded bg-slate-100 text-slate-600">
+                      {server.server.type}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={() => handleEdit(server)}
+                      className="h-8 w-8 p-0"
+                    >
+                      <Edit className="h-4 w-4" />
+                    </Button>
+                    <Button
+                      size="sm"
+                      variant="destructive"
+                      onClick={() => handleDelete(server)}
+                      className="h-8 w-8 p-0"
+                    >
+                      <Trash2 className="h-4 w-4" />
+                    </Button>
+                  </div>
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -149,6 +171,11 @@ export function McpPanel({ onBack }: { onBack?: () => void }) {
         </div>
       )}
       <AddMcpDialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen} appId="claude" />
+      <EditMcpDialog
+        open={!!editingServer}
+        onOpenChange={(open) => !open && setEditingServer(null)}
+        server={editingServer}
+      />
     </div>
   );
 }

@@ -101,7 +101,7 @@ export const providersApi = {
     return true;
   },
 
-  sortProviders: async (app: AppId, ids: string[]) => {
+  sortProviders: async (_app: AppId, _ids: string[]) => {
     await new Promise(resolve => setTimeout(resolve, 100));
     return true;
   },

@@ -78,7 +78,7 @@ export function ProviderCard({
         <div className="flex items-center gap-3">
           {/* Switch / Enable / In Use Button */}
           {isCurrent ? (
-            <Button size="sm" variant="secondary" className="bg-slate-100 text-slate-500 hover:bg-slate-100 cursor-default shadow-none gap-2 px-3">
+            <Button size="sm" variant="outline" className="bg-slate-100 text-slate-500 hover:bg-slate-100 cursor-default shadow-none gap-2 px-3">
               <Check className="h-3.5 w-3.5" />
               {t('common.inUse') || "使用中"}
             </Button>
