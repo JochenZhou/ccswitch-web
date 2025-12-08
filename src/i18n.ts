@@ -1,0 +1,150 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+const resources = {
+  zh: {
+    translation: {
+      apps: {
+        claude: 'Claude Code',
+        codex: 'Codex',
+        gemini: 'Gemini CLI',
+      },
+      common: {
+        add: '添加',
+        edit: '编辑',
+        delete: '删除',
+        save: '保存',
+        cancel: '取消',
+        confirm: '确认',
+        switch: '切换',
+        duplicate: '复制',
+        settings: '设置',
+        export: '导出',
+        import: '导入',
+        enable: '启用',
+        inUse: '使用中',
+      },
+      provider: {
+        title: '供应商管理',
+        addProvider: '添加供应商',
+        editProvider: '编辑供应商',
+        name: '名称',
+        website: '网站',
+        notes: '备注',
+        current: '当前',
+        empty: '暂无供应商',
+        emptyDesc: '点击添加按钮创建第一个供应商',
+      },
+      mcp: {
+        title: 'MCP 服务器',
+        addServer: '添加服务器',
+        serverName: '服务器名称',
+        enabled: '启用',
+        type: '类型',
+        command: '命令',
+        args: '参数',
+        url: 'URL',
+      },
+      settings: {
+        title: '设置',
+        language: '语言',
+        theme: '主题',
+        autoSync: '自动同步',
+        exportConfig: '导出配置',
+        importConfig: '导入配置',
+      },
+      confirm: {
+        deleteProvider: '删除供应商',
+        deleteProviderMessage: '确定要删除供应商 "{{name}}" 吗？',
+        deleteMcpServer: '删除 MCP 服务器',
+        deleteMcpServerMessage: '确定要删除服务器 "{{name}}" 吗？',
+      },
+      toast: {
+        success: '操作成功',
+        error: '操作失败',
+        providerAdded: '供应商已添加',
+        providerUpdated: '供应商已更新',
+        providerDeleted: '供应商已删除',
+        providerSwitched: '已切换到 {{name}}',
+      },
+    },
+  },
+  en: {
+    translation: {
+      apps: {
+        claude: 'Claude Code',
+        codex: 'Codex',
+        gemini: 'Gemini CLI',
+      },
+      common: {
+        add: 'Add',
+        edit: 'Edit',
+        delete: 'Delete',
+        save: 'Save',
+        cancel: 'Cancel',
+        confirm: 'Confirm',
+        switch: 'Switch',
+        duplicate: 'Duplicate',
+        settings: 'Settings',
+        export: 'Export',
+        import: 'Import',
+        enable: 'Enable',
+        inUse: 'In Use',
+      },
+      provider: {
+        title: 'Provider Management',
+        addProvider: 'Add Provider',
+        editProvider: 'Edit Provider',
+        name: 'Name',
+        website: 'Website',
+        notes: 'Notes',
+        current: 'Current',
+        empty: 'No Providers',
+        emptyDesc: 'Click add button to create your first provider',
+      },
+      mcp: {
+        title: 'MCP Servers',
+        addServer: 'Add Server',
+        serverName: 'Server Name',
+        enabled: 'Enabled',
+        type: 'Type',
+        command: 'Command',
+        args: 'Arguments',
+        url: 'URL',
+      },
+      settings: {
+        title: 'Settings',
+        language: 'Language',
+        theme: 'Theme',
+        autoSync: 'Auto Sync',
+        exportConfig: 'Export Config',
+        importConfig: 'Import Config',
+      },
+      confirm: {
+        deleteProvider: 'Delete Provider',
+        deleteProviderMessage: 'Are you sure to delete provider "{{name}}"?',
+        deleteMcpServer: 'Delete MCP Server',
+        deleteMcpServerMessage: 'Are you sure to delete server "{{name}}"?',
+      },
+      toast: {
+        success: 'Success',
+        error: 'Error',
+        providerAdded: 'Provider added',
+        providerUpdated: 'Provider updated',
+        providerDeleted: 'Provider deleted',
+        providerSwitched: 'Switched to {{name}}',
+      },
+    },
+  },
+};
+
+i18n.use(initReactI18next).init({
+  resources,
+  lng: 'zh',
+  fallbackLng: 'en',
+  interpolation: {
+    escapeValue: false,
+  },
+});
+
+export default i18n;
