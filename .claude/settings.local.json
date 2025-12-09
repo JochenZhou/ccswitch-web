@@ -1,7 +1,24 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(claude config list:*)",
+      "Bash(find:*)",
+      "Bash(pkill:*)",
+      "Bash(npm install @iarna/toml)",
+      "Bash(curl:*)",
+      "Bash(node --check:*)",
+      "Bash(npm run server)",
+      "Bash(docker build:*)",
+      "Bash(docker-compose build:*)",
+      "Bash(docker volume ls:*)",
+      "Bash(lsof:*)",
+      "Bash(docker-compose up:*)",
+      "Bash(docker-compose ps:*)",
+      "Bash(docker-compose logs:*)",
+      "Bash(cat:*)",
+      "Bash(docker-compose restart:*)",
+      "Bash(npm run build)"
     ],
     "deny": [],
     "ask": []

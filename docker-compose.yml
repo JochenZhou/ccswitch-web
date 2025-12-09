@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3002:4173"
+    volumes:
+      - /root/.claude:/root/.claude
+      - /root/.codex:/root/.codex
+      - ./data:/app/data
+    environment:
+      - PORT=3001
+      - DATA_DIR=/app/data

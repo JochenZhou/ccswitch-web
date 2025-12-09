@@ -33,7 +33,17 @@ npm install
 
 ### 开发模式
 
+**方式一：同时启动前端和后端**
 ```bash
+npm start
+```
+
+**方式二：分别启动**
+```bash
+# 终端 1 - 启动后端服务
+npm run server
+
+# 终端 2 - 启动前端开发服务器
 npm run dev
 ```
 
@@ -48,6 +58,12 @@ npm run build
 ```bash
 npm run preview
 ```
+
+## 重要说明
+
+- **后端服务必须运行**：为了更新 Ubuntu 系统中的 `/root/.claude/settings.json` 文件，必须启动后端服务（端口 3001）
+- **前端服务**：运行在端口 5173（Vite 默认端口）
+- **跨域配置**：后端已配置 CORS 允许前端访问
 
 ## 项目结构
 

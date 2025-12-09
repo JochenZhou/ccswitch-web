@@ -79,10 +79,17 @@ export function AddProviderDialog({ open, onOpenChange, appId, onSubmit }: AddPr
 GEMINI_API_KEY=${apiKey || 'sk-your-api-key-here'}
 GEMINI_MODEL=${model || 'gemini-3-pro-preview'}`
       );
+
     } else if (appId === 'codex') {
       setJsonConfig(
         `{
   "OPENAI_API_KEY": "${apiKey}"
+}`
+      );
+    } else if (appId === 'claude') {
+      setJsonConfig(
+        `{
+  "apiKey": "${apiKey}"
 }`
       );
     }
@@ -100,8 +107,17 @@ GEMINI_MODEL=${model || 'gemini-3-pro-preview'}`
       rawEnv: envConfig,
       rawJson: jsonConfig,
       rawToml: tomlConfig,
-      writeToCommon
+      writeToCommon,
+      baseUrl: baseUrl.trim(),
+      model: model.trim(),
     };
+
+    // Add Claude-specific models
+    if (appId === 'claude') {
+      config.haikuModel = haikuModel.trim();
+      config.sonnetModel = sonnetModel.trim();
+      config.opusModel = opusModel.trim();
+    }
 
     // ... Parsing logic could go here if we wanted to be strict ...
 

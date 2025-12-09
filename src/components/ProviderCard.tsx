@@ -75,32 +75,32 @@ export function ProviderCard({
         </div>
 
         {/* Actions Row */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           {/* Switch / Enable / In Use Button */}
           {isCurrent ? (
-            <Button size="sm" variant="outline" className="bg-slate-100 text-slate-500 hover:bg-slate-100 cursor-default shadow-none gap-2 px-3">
-              <Check className="h-3.5 w-3.5" />
-              {t('common.inUse') || "使用中"}
+            <Button size="sm" variant="outline" className="bg-slate-100 text-slate-500 hover:bg-slate-100 cursor-default shadow-none gap-1.5 px-2 sm:px-3 text-xs sm:text-sm whitespace-nowrap">
+              <Check className="h-3.5 w-3.5 flex-shrink-0" />
+              <span className="hidden xs:inline">{t('common.inUse') || "使用中"}</span>
             </Button>
           ) : (
             <div className="hidden group-hover:block transition-all duration-200">
-              <Button size="sm" onClick={onSwitch} className="bg-blue-600 hover:bg-blue-700 text-white rounded-md px-4 shadow-sm gap-2">
-                <Play className="h-3.5 w-3.5 fill-white" />
-                {t('common.enable') || "启用"}
+              <Button size="sm" onClick={onSwitch} className="bg-blue-600 hover:bg-blue-700 text-white rounded-md px-2 sm:px-4 shadow-sm gap-1.5 text-xs sm:text-sm whitespace-nowrap">
+                <Play className="h-3.5 w-3.5 fill-white flex-shrink-0" />
+                <span className="hidden xs:inline">{t('common.enable') || "启用"}</span>
               </Button>
             </div>
           )}
 
           {/* Icons Actions */}
-          <div className={cn("flex items-center gap-1", isCurrent ? "opacity-100" : "opacity-0 group-hover:opacity-100 transition-opacity")}>
-            <Button size="sm" variant="ghost" onClick={onEdit} className="h-10 w-10 rounded text-slate-500 hover:text-slate-800 hover:bg-slate-100">
-              <Edit className="h-6 w-6" />
+          <div className={cn("flex items-center gap-0.5 sm:gap-1", isCurrent ? "opacity-100" : "opacity-0 group-hover:opacity-100 transition-opacity")}>
+            <Button size="sm" variant="ghost" onClick={onEdit} className="h-8 w-8 sm:h-10 sm:w-10 rounded text-slate-500 hover:text-slate-800 hover:bg-slate-100 p-0">
+              <Edit className="h-4 w-4 sm:h-6 sm:w-6" />
             </Button>
-            <Button size="sm" variant="ghost" onClick={onDuplicate} className="h-10 w-10 rounded text-slate-500 hover:text-slate-800 hover:bg-slate-100">
-              <Copy className="h-6 w-6" />
+            <Button size="sm" variant="ghost" onClick={onDuplicate} className="h-8 w-8 sm:h-10 sm:w-10 rounded text-slate-500 hover:text-slate-800 hover:bg-slate-100 p-0">
+              <Copy className="h-4 w-4 sm:h-6 sm:w-6" />
             </Button>
-            <Button size="sm" variant="ghost" onClick={onDelete} className="h-10 w-10 rounded text-slate-500 hover:text-red-700 hover:bg-red-50">
-              <Trash2 className="h-6 w-6" />
+            <Button size="sm" variant="ghost" onClick={onDelete} className="h-8 w-8 sm:h-10 sm:w-10 rounded text-slate-500 hover:text-red-700 hover:bg-red-50 p-0">
+              <Trash2 className="h-4 w-4 sm:h-6 sm:w-6" />
             </Button>
           </div>
         </div>

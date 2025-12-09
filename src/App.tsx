@@ -46,7 +46,7 @@ function App() {
           <div className="flex items-center justify-between h-full">
             {/* Logo Area */}
             <div className="flex items-center gap-2">
-              <h1 className="text-xl font-bold text-blue-600 tracking-tight">CC Switch</h1>
+              <h1 className="text-xl font-bold text-blue-600 tracking-tight">CC Switch Web</h1>
               <Button
                 variant="ghost"
                 size="icon"

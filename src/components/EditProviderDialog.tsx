@@ -42,10 +42,12 @@ export function EditProviderDialog({ open, onOpenChange, provider, appId, onSubm
 
   const [writeToCommon, setWriteToCommon] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isLoaded, setIsLoaded] = useState(false);
 
   // Load provider data when opening
   useEffect(() => {
     if (open && provider) {
+      setIsLoaded(false);
       setName(provider.name || '');
       setNotes(provider.notes || '');
       setWebsiteUrl(provider.websiteUrl || '');
@@ -65,32 +67,59 @@ export function EditProviderDialog({ open, onOpenChange, provider, appId, onSubm
         const modelLine = envLines.find((line: string) => line.includes('GEMINI_MODEL='));
 
         if (apiKeyLine) setApiKey(apiKeyLine.split('=')[1] || '');
-        if (baseUrlLine) setBaseUrl(baseUrlLine.split('=')[1] || '');
+
+        const extractedBaseUrl = baseUrlLine ? baseUrlLine.split('=')[1] : '';
+        setBaseUrl(extractedBaseUrl || provider.websiteUrl || '');
+
         if (modelLine) setModel(modelLine.split('=')[1] || '');
+
       } else if (appId === 'codex') {
+        let parsedJson: any = {};
         try {
-          const jsonData = JSON.parse(config.rawJson || '{}');
-          setApiKey(jsonData.OPENAI_API_KEY || '');
+          parsedJson = JSON.parse(config.rawJson || '{}');
+          setApiKey(parsedJson.OPENAI_API_KEY || '');
         } catch (e) {
           console.error('Failed to parse JSON config:', e);
         }
-        setBaseUrl(config.baseUrl || '');
-        setModel(config.model || '');
+        // Try top-level then inside json (unlikely for Codex but good fallback)
+        setBaseUrl(config.baseUrl || parsedJson.baseUrl || provider.websiteUrl || '');
+        setModel(config.model || parsedJson.model || '');
+
       } else if (appId === 'claude') {
-        setBaseUrl(config.baseUrl || '');
-        setModel(config.model || '');
-        setHaikuModel(config.haikuModel || '');
-        setSonnetModel(config.sonnetModel || '');
-        setOpusModel(config.opusModel || '');
+        let parsedJson: any = {};
+        try {
+          parsedJson = JSON.parse(config.rawJson || '{}');
+        } catch (e) { /* ignore */ }
+
+        // Try top-level then inside json
+        setBaseUrl(config.baseUrl || parsedJson.baseUrl || provider.websiteUrl || '');
+        setModel(config.model || parsedJson.model || '');
+
+        setHaikuModel(config.haikuModel || parsedJson.haikuModel || '');
+        setSonnetModel(config.sonnetModel || parsedJson.sonnetModel || '');
+        setOpusModel(config.opusModel || parsedJson.opusModel || '');
+
+        // Extract API Key priority: json > config > empty
+        if (parsedJson.apiKey) {
+          setApiKey(parsedJson.apiKey);
+        } else if (config.apiKey) {
+          setApiKey(config.apiKey);
+        }
       }
 
       // Clear errors when opening
       setErrors({});
+      // Mark as loaded so sync effect can run
+      setTimeout(() => setIsLoaded(true), 0);
+    } else {
+      setIsLoaded(false);
     }
   }, [open, provider, appId]);
 
   // Dynamic Content Generation
   useEffect(() => {
+    if (!open || !isLoaded) return;
+
     if (appId === 'gemini') {
       setEnvConfig(
         `GOOGLE_GEMINI_BASE_URL=${baseUrl || 'https://your-api-endpoint.com/'}
@@ -103,8 +132,14 @@ GEMINI_MODEL=${model || 'gemini-3-pro-preview'}`
   "OPENAI_API_KEY": "${apiKey}"
 }`
       );
+    } else if (appId === 'claude') {
+      setJsonConfig(
+        `{
+  "apiKey": "${apiKey}"
+}`
+      );
     }
-  }, [apiKey, baseUrl, model, appId]);
+  }, [apiKey, baseUrl, model, appId, open, isLoaded]);
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
@@ -412,13 +447,14 @@ GEMINI_MODEL=${model || 'gemini-3-pro-preview'}`
             </label>
             <a href="#" className="text-sm text-blue-500 hover:underline ml-2">编辑通用配置</a>
           </div>
-          <div className="flex gap-2">
-            <Button variant="outline" onClick={() => onOpenChange(false)}>
+          <div className="flex flex-col sm:flex-row gap-2">
+            <Button variant="outline" onClick={() => onOpenChange(false)} className="order-3 sm:order-1">
               {t('common.cancel') || '取消'}
             </Button>
-            <Button type="submit" form="edit-provider-form" className="bg-green-600 hover:bg-green-700 text-white gap-2">
-              <Save className="h-4 w-4" />
-              {t('common.save') || '保存'}
+            <Button type="submit" form="edit-provider-form" className="bg-green-600 hover:bg-green-700 text-white gap-2 order-1 sm:order-2">
+              <Save className="h-4 w-4 flex-shrink-0" />
+              <span className="hidden sm:inline">{t('common.save') || '保存'}</span>
+              <span className="sm:hidden">保存</span>
             </Button>
           </div>
         </div>

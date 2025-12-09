@@ -135,18 +135,18 @@ export function SettingsPanel({ onBack }: { onBack?: () => void }) {
           <CardTitle>配置管理</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="flex gap-2">
-            <Button onClick={handleExport}>
-              <Download className="h-4 w-4 mr-2" />
-              {t('settings.exportConfig')}
+          <div className="flex flex-col sm:flex-row gap-2">
+            <Button onClick={handleExport} className="justify-center sm:justify-start">
+              <Download className="h-4 w-4 sm:mr-2 flex-shrink-0" />
+              <span className="hidden sm:inline">{t('settings.exportConfig')}</span>
             </Button>
-            <Button onClick={handleImport} variant="outline">
-              <Upload className="h-4 w-4 mr-2" />
-              {t('settings.importConfig')}
+            <Button onClick={handleImport} variant="outline" className="justify-center sm:justify-start">
+              <Upload className="h-4 w-4 sm:mr-2 flex-shrink-0" />
+              <span className="hidden sm:inline">{t('settings.importConfig')}</span>
             </Button>
-            <Button onClick={handleImportSql} variant="outline">
-              <Database className="h-4 w-4 mr-2" />
-              导入 SQL 备份
+            <Button onClick={handleImportSql} variant="outline" className="justify-center sm:justify-start">
+              <Database className="h-4 w-4 sm:mr-2 flex-shrink-0" />
+              <span className="hidden sm:inline">导入 SQL 备份</span>
             </Button>
           </div>
         </CardContent>

@@ -38,5 +38,5 @@ export function DialogTitle({ className, ...props }: React.HTMLAttributes<HTMLHe
 }
 
 export function DialogFooter({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn("flex justify-end gap-2 mt-6", className)} {...props} />
+  return <div className={cn("flex flex-col-reverse sm:flex-row justify-end gap-2 mt-6", className)} {...props} />
 }

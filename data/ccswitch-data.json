@@ -1,0 +1,420 @@
+{
+  "claude": {
+    "providers": {
+      "claude-1765245555177-74lke90cb": {
+        "id": "claude-1765245555177-74lke90cb",
+        "name": "随时跑路公益",
+        "settingsConfig": {
+          "alwaysThinkingEnabled": true,
+          "env": {
+            "ANTHROPIC_AUTH_TOKEN": "sk-EYEe0cBiSnAj51FxXGJAELglR3gniXWafFcrno9I3YSy9DNX",
+            "ANTHROPIC_BASE_URL": "https://runanytime.hxi.me",
+            "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-sonnet-4-5-20250929",
+            "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-sonnet-4-5-20250929",
+            "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-5-20250929",
+            "ANTHROPIC_MODEL": "claude-sonnet-4-5-20250929"
+          }
+        }
+      },
+      "claude-1765245555189-mb7aff816": {
+        "id": "claude-1765245555189-mb7aff816",
+        "name": "包子铺",
+        "settingsConfig": {
+          "env": {
+            "ANTHROPIC_AUTH_TOKEN": "sk-hkjB8agvCa20ckd_u6qY6ogJx4WMBLIdi0lFKC_vs42DiBWG0W_px-XrJ_8",
+            "ANTHROPIC_BASE_URL": "https://api.5202030.xyz",
+            "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-haiku-4.5",
+            "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-4.1-opus",
+            "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-5-20250929",
+            "ANTHROPIC_MODEL": "claude-sonnet-4-5-20250929"
+          }
+        }
+      },
+      "claude-1765245555189-r975bxrda": {
+        "id": "claude-1765245555189-r975bxrda",
+        "name": "逆水寒",
+        "settingsConfig": {
+          "env": {
+            "ANTHROPIC_AUTH_TOKEN": "sk-blHScpn7OtWqjgTAeEFYqIBCDwgASCUj1eueBF9ljfe9LLNb",
+            "ANTHROPIC_BASE_URL": "https://api.sxxe.net",
+            "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-sonnet-4-5-20250929",
+            "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-sonnet-4-5-20250929",
+            "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-5-20250929",
+            "ANTHROPIC_MODEL": "claude-sonnet-4-5-20250929"
+          }
+        }
+      },
+      "claude-1765245555190-0eczv55c5": {
+        "id": "claude-1765245555190-0eczv55c5",
+        "name": "AnyRouter",
+        "settingsConfig": {
+          "env": {
+            "ANTHROPIC_AUTH_TOKEN": "sk-cNXE2CeZJakgtJOeq99zQyL4jSfHTyGRLozmkvBzke7LywP7",
+            "ANTHROPIC_BASE_URL": "https://c.cspok.cn",
+            "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-opus-4-5-20251101",
+            "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4-5-20251101",
+            "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-opus-4-5-20251101",
+            "ANTHROPIC_MODEL": "claude-opus-4-5-20251101"
+          }
+        }
+      },
+      "claude-1765245555190-3n2c5hfrq": {
+        "id": "claude-1765245555190-3n2c5hfrq",
+        "name": "elysiver",
+        "settingsConfig": {
+          "alwaysThinkingEnabled": true,
+          "env": {
+            "ANTHROPIC_AUTH_TOKEN": "sk-0MDruvr4MUFA2IuCzhw5AmfydbZ9TnvSXVTV2FptO67QernQ",
+            "ANTHROPIC_BASE_URL": "https://elysia.h-e.top",
+            "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-4.5-sonnet",
+            "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-4.5-sonnet",
+            "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-4.5-sonnet",
+            "ANTHROPIC_MODEL": "claude-4.5-sonnet"
+          }
+        }
+      },
+      "claude-1765245555190-rbx16ufb5": {
+        "id": "claude-1765245555190-rbx16ufb5",
+        "name": "Zhipu GLM",
+        "settingsConfig": {
+          "env": {
+            "ANTHROPIC_AUTH_TOKEN": "code-switch",
+            "ANTHROPIC_BASE_URL": "http://127.0.0.1:18100"
+          }
+        }
+      },
+      "claude-1765245555194-nn1uwa2c6": {
+        "id": "claude-1765245555194-nn1uwa2c6",
+        "name": "b4u",
+        "settingsConfig": {
+          "alwaysThinkingEnabled": true,
+          "env": {
+            "ANTHROPIC_AUTH_TOKEN": "sk-d398tTdkwND1WrmQ9qIozlKVRhKKMaM2M2kd9I10GK6Y5uTx",
+            "ANTHROPIC_BASE_URL": "https://b4u.qzz.io",
+            "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-4.5-sonnet",
+            "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-4.5-sonnet",
+            "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-4.5-sonnet",
+            "ANTHROPIC_MODEL": "claude-4.5-sonnet"
+          }
+        }
+      },
+      "claude-1765245555194-z10edcla8": {
+        "id": "claude-1765245555194-z10edcla8",
+        "name": "New API",
+        "settingsConfig": {
+          "alwaysThinkingEnabled": true,
+          "env": {
+            "ANTHROPIC_AUTH_TOKEN": "sk-91p1qSXP4nsuRRpUTdfMbQPfPNjtpvtIkSWtWyVq4JwfF5QY",
+            "ANTHROPIC_BASE_URL": "http://192.168.101.131:3005",
+            "ANTHROPIC_DEFAULT_HAIKU_MODEL": "zai-glm-4.6",
+            "ANTHROPIC_DEFAULT_OPUS_MODEL": "zai-glm-4.6",
+            "ANTHROPIC_DEFAULT_SONNET_MODEL": "zai-glm-4.6",
+            "ANTHROPIC_MODEL": "zai-glm-4.6"
+          }
+        }
+      },
+      "claude-1765245555194-0y8zxkt0r": {
+        "id": "claude-1765245555194-0y8zxkt0r",
+        "name": "yescode",
+        "settingsConfig": {
+          "env": {
+            "ANTHROPIC_AUTH_TOKEN": "cr_9b2949627b5a4fd2c2bbdb446e8e80fa557b94d4d859ad38a0afb880851bfbe9",
+            "ANTHROPIC_BASE_URL": "https://cotest.yes.vg",
+            "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-sonnet-4-5-20250929",
+            "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-sonnet-4-5-20250929",
+            "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-5-20250929",
+            "ANTHROPIC_MODEL": "claude-sonnet-4-5-20250929"
+          }
+        }
+      },
+      "claude-1765245555194-y035w7za0": {
+        "id": "claude-1765245555194-y035w7za0",
+        "name": "薄荷API gemini-2.5-pro",
+        "settingsConfig": {
+          "env": {
+            "ANTHROPIC_AUTH_TOKEN": "sk-qlMD3wmS5mQtlTzS3nt7SM5XQ1x9hhmqGB2UNx1FCnLldcSB",
+            "ANTHROPIC_BASE_URL": "https://x666.me",
+            "ANTHROPIC_DEFAULT_HAIKU_MODEL": "gemini-2.5-pro",
+            "ANTHROPIC_DEFAULT_OPUS_MODEL": "gemini-2.5-pro",
+            "ANTHROPIC_DEFAULT_SONNET_MODEL": "gemini-2.5-pro",
+            "ANTHROPIC_MODEL": "gemini-2.5-pro"
+          }
+        }
+      },
+      "claude-1765245555195-8mii1mh2e": {
+        "id": "claude-1765245555195-8mii1mh2e",
+        "name": "Enmy API",
+        "settingsConfig": {
+          "alwaysThinkingEnabled": true,
+          "env": {
+            "ANTHROPIC_AUTH_TOKEN": "sk-91p1qSXP4nsuRRpUTdfMbQPfPNjtpvtIkSWtWyVq4JwfF5QY",
+            "ANTHROPIC_BASE_URL": "http://192.168.101.131:3005",
+            "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-sonnet-4-5-20250929",
+            "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-sonnet-4-5-20250929",
+            "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-5-20250929",
+            "ANTHROPIC_MODEL": "claude-sonnet-4-5-20250929"
+          }
+        }
+      },
+      "claude-1765245555195-w98z2aqoe": {
+        "id": "claude-1765245555195-w98z2aqoe",
+        "name": "枫叶",
+        "settingsConfig": {
+          "env": {
+            "ANTHROPIC_AUTH_TOKEN": "sk-oyoQF0UNQsSMnHsYg7lyrhGfwO20W9dWNgi6cZimzoxkoFTK",
+            "ANTHROPIC_BASE_URL": "https://fengyeai.chat",
+            "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-sonnet-4-5-20250929",
+            "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-sonnet-4-5-20250929",
+            "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-5-20250929",
+            "ANTHROPIC_MODEL": "claude-sonnet-4-5-20250929"
+          }
+        }
+      },
+      "claude-1765245555196-rv4kp3t8b": {
+        "id": "claude-1765245555196-rv4kp3t8b",
+        "name": "88code",
+        "settingsConfig": {
+          "env": {
+            "ANTHROPIC_AUTH_TOKEN": "88_d7b93fa35d6a92872cbad03165af526a9ebda75eb99ccb162cd08239e9862247",
+            "ANTHROPIC_BASE_URL": "https://www.88code.org/api",
+            "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-haiku-4-5-20251001",
+            "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4-5-20251101",
+            "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-5-20250929",
+            "ANTHROPIC_MODEL": "claude-sonnet-4-5-20250929"
+          }
+        }
+      },
+      "claude-1765245555198-2p8vr0nwl": {
+        "id": "claude-1765245555198-2p8vr0nwl",
+        "name": "黑与白",
+        "settingsConfig": {
+          "alwaysThinkingEnabled": true,
+          "env": {
+            "ANTHROPIC_AUTH_TOKEN": "sk-6B7gfWxRWhabz1A_ooFDP9TB6gAq1Yfh7-flXKwjqlr8TH7GSLgtCxipbqw",
+            "ANTHROPIC_BASE_URL": "https://ai.hybgzs.com/claude",
+            "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-sonnet-4.5-think",
+            "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-sonnet-4.5-think",
+            "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4.5-think",
+            "ANTHROPIC_MODEL": "claude-sonnet-4.5-think"
+          }
+        }
+      }
+    },
+    "current": "claude-1765245555177-74lke90cb"
+  },
+  "codex": {
+    "providers": {
+      "codex-1765245555195-3d51mwr5c": {
+        "id": "codex-1765245555195-3d51mwr5c",
+        "name": "AnyRouter",
+        "settingsConfig": {
+          "auth": {
+            "OPENAI_API_KEY": "sk-cNXE2CeZJakgtJOeq99zQyL4jSfHTyGRLozmkvBzke7LywP7"
+          },
+          "config": "model_provider = \"anyrouter\"\nmodel = \"gpt-5-codex\"\nmodel_reasoning_effort = \"high\"\ndisable_response_storage = true\n\n[model_providers.anyrouter]\nname = \"anyrouter\"\nbase_url = \"https://anyrouter.top/v1\"\nwire_api = \"responses\"\nrequires_openai_auth = true\n"
+        }
+      },
+      "codex-1765245555195-fiksessca": {
+        "id": "codex-1765245555195-fiksessca",
+        "name": "包子铺",
+        "settingsConfig": {
+          "auth": {
+            "OPENAI_API_KEY": "sk-hkjB8agvCa20ckd_u6qY6ogJx4WMBLIdi0lFKC_vs42DiBWG0W_px-XrJ_8"
+          },
+          "config": "base_url = \"https://api.5202030.xyz\"\nwindows_wsl_setup_acknowledged = true\nmodel = \"gpt-5.1\"\n\n[mcp_servers]\n\n[mcp_servers.sequential-thinking]\ntype = \"stdio\"\ncommand = \"npx\"\nargs = [\"-y\", \"@modelcontextprotocol/server-sequential-thinking\"]\n\n[mcp_servers.time]\ntype = \"stdio\"\ncommand = \"python\"\nargs = [\"-m\", \"mcp_server_time\"]\n\n[mcp_servers.serena]\ntype = \"stdio\"\ncommand = \"uvx\"\nargs = [\"–from,\", \"git+https://github.com/oraios/serena,\", \"serena-mcp-server,\", \"–context,\", \"desktop-app,\", \"–mode,\", \"editing,\", \"–mode,\", \"interactive\"]\n\n[notice]\nhide_gpt5_1_migration_prompt = true\n"
+        }
+      },
+      "codex-1765245555195-tdjw6qcrc": {
+        "id": "codex-1765245555195-tdjw6qcrc",
+        "name": "yescode",
+        "settingsConfig": {
+          "auth": {
+            "OPENAI_API_KEY": "cr_9b2949627b5a4fd2c2bbdb446e8e80fa557b94d4d859ad38a0afb880851bfbe9"
+          },
+          "config": "model_provider = \"yescode\"\nmodel = \"gpt-5.1-codex\"\nmodel_reasoning_effort = \"high\"\nwindows_wsl_setup_acknowledged = true\n\n[model_providers.yescode]\nname = \"yescode\"\nbase_url = \"https://cotest.yes.vg/v1\"\nwire_api = \"responses\"\nenv_key = \"YESCODE_API_KEY\"\n\n[notice]\nhide_gpt5_1_migration_prompt = true\n"
+        }
+      },
+      "codex-1765245555196-x2yh4gecn": {
+        "id": "codex-1765245555196-x2yh4gecn",
+        "name": "Enmy API",
+        "settingsConfig": {
+          "auth": {
+            "OPENAI_API_KEY": "sk-91p1qSXP4nsuRRpUTdfMbQPfPNjtpvtIkSWtWyVq4JwfF5QY"
+          },
+          "config": "model_provider = \"yescode\"\nmodel = \"gpt-5.1\"\nmodel_reasoning_effort = \"high\"\nwindows_wsl_setup_acknowledged = true\n\n[model_providers.yescode]\nname = \"yescode\"\nbase_url = \"https://cotest.yes.vg/v1\"\nwire_api = \"responses\"\nenv_key = \"YESCODE_API_KEY\"\n\n[notice]\nhide_gpt5_1_migration_prompt = true\n"
+        }
+      },
+      "codex-1765245555196-ucboh6sil": {
+        "id": "codex-1765245555196-ucboh6sil",
+        "name": "88code",
+        "settingsConfig": {
+          "auth": {
+            "OPENAI_API_KEY": "88_d7b93fa35d6a92872cbad03165af526a9ebda75eb99ccb162cd08239e9862247"
+          },
+          "config": "model_provider = \"custom\"\nmodel = \"gpt-5.1-codex\"\nmodel_reasoning_effort = \"high\"\ndisable_response_storage = true\n\n[model_providers.custom]\nname = \"custom\"\nwire_api = \"responses\"\nrequires_openai_auth = true\nbase_url = \"https://www.88code.org/openai/v1\"\n"
+        }
+      },
+      "codex-1765245555199-wc1nceoe1": {
+        "id": "codex-1765245555199-wc1nceoe1",
+        "name": "黑与白",
+        "settingsConfig": {
+          "auth": {
+            "OPENAI_API_KEY": "sk-6B7gfWxRWhabz1A_ooFDP9TB6gAq1Yfh7-flXKwjqlr8TH7GSLgtCxipbqw"
+          },
+          "config": "model_provider = \"custom\"\nmodel = \"claude-sonnet-4.5-think\"\nmodel_reasoning_effort = \"high\"\ndisable_response_storage = true\n\n[model_providers.custom]\nname = \"custom\"\nwire_api = \"responses\"\nrequires_openai_auth = true\nbase_url = \"https://ai.hybgzs.com\"\n"
+        }
+      }
+    },
+    "current": ""
+  },
+  "gemini": {
+    "providers": {},
+    "current": ""
+  },
+  "mcp": {
+    "servers": {
+      "mcp-1765245555209-6gq9yj09w": {
+        "id": "mcp-1765245555209-6gq9yj09w",
+        "name": "@modelcontextprotocol/server-time",
+        "enabled": true,
+        "apps": {
+          "claude": false,
+          "codex": false,
+          "gemini": false
+        },
+        "server": {
+          "type": "stdio",
+          "command": "",
+          "args": []
+        },
+        "args": [
+          "-m",
+          "mcp_server_time"
+        ],
+        "command": "python",
+        "type": "stdio"
+      },
+      "mcp-1765245555214-ipgyai622": {
+        "id": "mcp-1765245555214-ipgyai622",
+        "name": "mcp-server-fetch",
+        "enabled": true,
+        "apps": {
+          "claude": false,
+          "codex": false,
+          "gemini": false
+        },
+        "server": {
+          "type": "stdio",
+          "command": "",
+          "args": []
+        },
+        "args": [
+          "mcp-server-fetch"
+        ],
+        "command": "uvx",
+        "type": "stdio"
+      },
+      "mcp-1765245555214-goovmcoak": {
+        "id": "mcp-1765245555214-goovmcoak",
+        "name": "@modelcontextprotocol/server-sequential-thinking",
+        "enabled": true,
+        "apps": {
+          "claude": false,
+          "codex": false,
+          "gemini": false
+        },
+        "server": {
+          "type": "stdio",
+          "command": "",
+          "args": []
+        },
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-sequential-thinking"
+        ],
+        "command": "npx",
+        "type": "stdio"
+      },
+      "mcp-1765245555215-7ub0lw7mg": {
+        "id": "mcp-1765245555215-7ub0lw7mg",
+        "name": "@modelcontextprotocol/server-memory",
+        "enabled": true,
+        "apps": {
+          "claude": false,
+          "codex": false,
+          "gemini": false
+        },
+        "server": {
+          "type": "stdio",
+          "command": "",
+          "args": []
+        },
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-memory"
+        ],
+        "command": "npx",
+        "type": "stdio"
+      },
+      "mcp-1765245555215-csy2srzkc": {
+        "id": "mcp-1765245555215-csy2srzkc",
+        "name": "serena",
+        "enabled": true,
+        "apps": {
+          "claude": false,
+          "codex": false,
+          "gemini": false
+        },
+        "server": {
+          "type": "stdio",
+          "command": "",
+          "args": []
+        },
+        "args": [
+          "–from,",
+          "git+https://github.com/oraios/serena,",
+          "serena-mcp-server,",
+          "–context,",
+          "desktop-app,",
+          "–mode,",
+          "editing,",
+          "–mode,",
+          "interactive"
+        ],
+        "command": "uvx",
+        "type": "stdio"
+      },
+      "mcp-1765245555215-gpwg1bg09": {
+        "id": "mcp-1765245555215-gpwg1bg09",
+        "name": "@upstash/context7-mcp",
+        "enabled": true,
+        "apps": {
+          "claude": false,
+          "codex": false,
+          "gemini": false
+        },
+        "server": {
+          "type": "stdio",
+          "command": "",
+          "args": []
+        },
+        "args": [
+          "-y",
+          "@upstash/context7-mcp"
+        ],
+        "command": "npx",
+        "type": "stdio"
+      }
+    }
+  },
+  "prompts": {
+    "claude": {},
+    "codex": {},
+    "gemini": {}
+  },
+  "settings": {
+    "language": "zh",
+    "theme": "system",
+    "autoSync": false
+  }
+}

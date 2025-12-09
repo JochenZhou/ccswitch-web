@@ -1,0 +1,9 @@
+@echo off
+echo Starting backend server...
+start /B node server/index.js
+
+echo Waiting 2 seconds...
+timeout /t 2 /nobreak > nul
+
+echo Starting frontend preview...
+npm run preview -- --host
