@@ -18,7 +18,10 @@
       "Bash(docker-compose logs:*)",
       "Bash(cat:*)",
       "Bash(docker-compose restart:*)",
-      "Bash(npm run build)"
+      "Bash(npm run build)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push)"
     ],
     "deny": [],
     "ask": []

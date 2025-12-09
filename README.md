@@ -1,4 +1,4 @@
-# CC Switch Web
+# CC Switch Web（半成品，只支持导入备份和切换供应商功能）
 
 基于原版 [cc-switch](https://github.com/farion1231/cc-switch) 的 WebUI 版本。
 
